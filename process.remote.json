@@ -1,0 +1,9 @@
+{
+	"apps": [
+		{
+			"name": "anajalba.me",
+			"cwd": "/home/deploy/node/anajalba.me",
+			"script": "./index.js"
+		}
+	]
+}
