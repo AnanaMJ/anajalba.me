@@ -2,8 +2,18 @@ extends root
 
 block body
 	div.container
-		div.row
-			div.col-12
-				div.alert.alert-info To do: Navigation
+		div.header.clearflix
+			nav: ul.nav.nav-pills.float-right
+				li.nav-item
+					a(class="nav-link" href="/") Home
+				li.nav-item
+					a(class="nav-link" + (activePage == "about" ? " active" : "") href="/about") About
+				li.nav-item
+					a(class="nav-link" + (activePage == "art-wall" ? " active" : "") href="/art-wall") Art Wall
+				li.nav-item
+					a(class="nav-link" + (activePage == "contact" ? " active" : "") href="/contact") Contact
+			h3
+				i.fa.fa-user-circle-o.fa-fw
+				|Ana Jalba
 
 		block page-body
