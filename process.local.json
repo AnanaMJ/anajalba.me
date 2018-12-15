@@ -1,9 +1,0 @@
-{
-	"apps": [
-		{
-			"name": "anajalba.me",
-			"cwd": ".",
-			"script": "./index.js"
-		}
-	]
-}
