@@ -1,0 +1,20 @@
+version: '3.3'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+        - NPM_FONT_AWESOME_TOKEN=${NPM_FONT_AWESOME_TOKEN}
+    restart: always
+    environment:
+      - ENV=prod
+      - NODE_ENV=production
+      - NPM_EXECPATH=yarn
+      - npm_execpath=yarn
+      - RUNNING_IN=docker
+      - NPM_FONT_AWESOME_TOKEN=${NPM_FONT_AWESOME_TOKEN}
+    volumes:
+      - ./logs:/usr/src/app/logs
+    ports:
+      - "3000:3000"
