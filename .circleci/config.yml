@@ -1,0 +1,77 @@
+version: 2
+
+defaults: &defaults
+  working_directory: ~/anajalba.me
+  docker:
+    - image: circleci/node:11.4.0
+
+jobs:
+  setup:
+    <<: *defaults
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - dependency-cache-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+            - dependency-cache-{{ checksum "package.json" }}-
+            - dependency-cache-
+      - run:
+          name: Install dependencies
+          command: yarn install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}-{{ checksum "yarn.lock" }}
+          paths:
+            - node_modules
+      - persist_to_workspace:
+          root: .
+          paths:
+            - .
+
+  lint:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Run Linter
+          command: yarn lint
+
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Build
+          command: yarn build
+
+  maybe_deploy:
+    # Tag filtering in CircleCI is unreliable - this is hacky, but it works
+    <<: *defaults
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "be:31:50:77:36:fb:1a:8a:ce:1e:8a:bc:51:34:3e:6b"
+      - attach_workspace:
+          at: .
+      - run:
+          name: Maybe Deploy
+          command: |
+            if ! git describe --exact-match HEAD > /dev/null 2>&1; then echo "Not on tagged commit - nothing to do"; exit 0; fi
+            ssh-keyscan $DEPLOY_HOST >> ~/.ssh/known_hosts
+            ssh $DEPLOY_USER@$DEPLOY_HOST "cd $DEPLOY_DIR && git pull && ./.scripts/deploy-remote.sh"
+
+workflows:
+  version: 2
+  build_test_deploy:
+    jobs:
+      - setup
+      - lint:
+          requires:
+            - setup
+      - build:
+          requires:
+            - lint
+      - maybe_deploy:
+          requires:
+            - build
