@@ -1,11 +1,11 @@
 import * as React from "react";
 import {ReactNode} from "react";
 import {BrowserRouter, Link, Route, Switch} from "react-router-dom";
-import {HomePage} from "../HomePage/HomePage";
-import {AboutPage} from "../AboutPage/AboutPage";
 import * as bs from "../../global-styles/Bootstrap.scss";
-import * as styles from "./App.scss";
 import {combine} from "../../helpers/style-helpers";
+import {AboutPage} from "../AboutPage/AboutPage";
+import {HomePage} from "../HomePage/HomePage";
+import * as styles from "./App.scss";
 
 class App extends React.PureComponent {
 
