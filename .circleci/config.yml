@@ -3,7 +3,7 @@ version: 2
 defaults: &defaults
   working_directory: ~/anajalba.me
   docker:
-    - image: circleci/node:11.4.0
+    - image: circleci/node:erbium
 
 jobs:
   setup:

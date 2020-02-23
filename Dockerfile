@@ -1,4 +1,4 @@
-FROM node:dubnium
+FROM node:erbium
 ARG NPM_FONT_AWESOME_TOKEN
 
 WORKDIR /usr/src/app
