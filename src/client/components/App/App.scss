@@ -2,19 +2,19 @@
 @import "~bootstrap-scss/variables";
 
 // Custom translucent site header
-$site-header-bg-colour: rgba(0, 0, 0, .85);
+$site-header-bg-colour: rgba(0, 0, 0, 0.85);
 
 .site-header {
-	backdrop-filter: saturate(180%) blur(20px);
-	background-color: $site-header-bg-colour;
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: $site-header-bg-colour;
 
-	a {
-		color: $gray-500;
-		transition: ease-in-out color .15s;
+  a {
+    color: $gray-500;
+    transition: ease-in-out color 0.15s;
 
-		&:hover {
-			color: $white;
-			text-decoration: none;
-		}
-	}
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
 }

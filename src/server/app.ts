@@ -1,13 +1,13 @@
 import * as Express from "express";
-import {isProd} from "./helpers/config-loader";
-import {setupDevAppRoutes, setupProdAppRoutes} from "./middleware/app-routes";
+import { isProd } from "./helpers/config-loader";
+import { setupDevAppRoutes, setupProdAppRoutes } from "./middleware/app-routes";
 
 const app = Express();
 
 if (isProd()) {
-	setupProdAppRoutes(app);
+  setupProdAppRoutes(app);
 } else {
-	setupDevAppRoutes(app);
+  setupDevAppRoutes(app);
 }
 
 const server = app.listen(3000, () => console.log("Server is listening on port 3000"));
