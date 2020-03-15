@@ -1,0 +1,103 @@
+{
+  "education": [
+    {
+      "title": "BSc Computer Science with a Year in Industry, King's College London",
+      "description": ["Graduated with a first class degree (87%)"],
+      "years": "2014 - 2018"
+    },
+    {
+      "title": "Spiru Haret National College, Romania",
+      "description": ["A-level equivalent in Mathematics (99%) and Computer Science (93%)"],
+      "years": "2010 - 2014"
+    }
+  ],
+  "technical skills": [
+    "Java, Python, Git, Unix systems, Hive, MySQL, MongoDB (work and university).",
+    "Kotlin, Node.js (university and personal projects).",
+    "Experience of working in a production environment, including the development of code for data management automation, QA and unit testing modules and performing code reviews on critical modules."
+  ],
+  "work experience": [
+    {
+      "title": "Software Engineer, Privitar",
+      "description": ["Working on Java-based data privacy software."],
+      "years": "Oct. 2019 - present"
+    },
+    {
+      "title": "Software Engineer, Hotels.com (Expedia Group brand)",
+      "description": [
+        "Worked on open-source Java projects like Waggle Dance, Circus Train and Circus Train BigQuery to manage cloud data as part of the Big Data Platform team.",
+        "Worked on inner-source projects that use Java, Spring Boot, Maven and Terraform for Amazon AWS."
+      ],
+      "years": "Jul. 2018 - Sep. 2019"
+    },
+    {
+      "title": "Software Engineering Industrial Placement, Nomura",
+      "description": [
+        "Worked within Database and Middleware Engineering team to manage database systems.",
+        "Automated MySQL and MongoDB instance builds using Ansible and automated database backups for MySQL using Python.",
+        "Created an API to interact with logical volumes on Linux machines and an API to interact with Solace Systems appliances."
+      ],
+      "years": "Jun. 2016 - Sep. 2017"
+    },
+    {
+      "title": "Event Organiser, Unitu, London",
+      "description": [
+        "Organised 2 hackathons in different locations in the UK (Innovation Warehouse, London and University of Warwick, Coventry). Responsible for sourcing the supplies, venues, mentors and judges for the events, as well as managing marketing and on­-the-­day logistics."
+      ],
+      "years": "Jul. 2015 - April 2016"
+    },
+    {
+      "title": "Student Ambassador, King’s College London",
+      "description": [
+        "Represented the University on campus tours, stewarded events and promoted King’s College London to prospective applicants.",
+        "Presented the university and its offerings to people of different cultures, backgrounds and ages."
+      ],
+      "years": "Feb. 2015 - Sep. 2017"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Florence Hughes Exhibition Prize",
+      "description": [
+        "for achieving the highest standard of work within the Faculty of Natural and Mathematical Sciences during my second year."
+      ],
+      "years": "2016"
+    },
+    {
+      "title": "Credit Suisse Prize",
+      "description": [
+        "for developing the best group project out of over 40 groups for the Software Engineering Group Project module."
+      ],
+      "years": "2016"
+    },
+    {
+      "title": "Ada Lovelace Student Prize",
+      "description": ["for contributions to the advancement of gender equality."],
+      "years": "2015"
+    }
+  ],
+  "voluntary work": [
+    {
+      "title": "Committee Member, KCL Tech Society, King’s College London",
+      "description": [
+        "Served as a teaching assistant for an 8-week Android workshop.",
+        "Involved in the organisation and running of four large hackathons, a Python workshop, and spoke about women in technology for a tech conference event."
+      ],
+      "years": "Oct. 2014 - Dec. 2015"
+    },
+    {
+      "title": "Volunteer at East European Comic Con, Bucharest, Romania",
+      "description": [
+        "Checked tickets for an autograph stand for Jason Momoa during a 3-day event for 20,000 attendees."
+      ],
+      "years": "May 2014"
+    },
+    {
+      "title": "Scout, National Organization of Romanian Scouts",
+      "description": [
+        "Co-­organised events for hundreds of scouts across the country, during some of which I also formed teams to complete various challenges."
+      ],
+      "years": "2006 - 2014"
+    }
+  ]
+}
