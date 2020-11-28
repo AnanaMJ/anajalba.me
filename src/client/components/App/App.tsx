@@ -1,12 +1,12 @@
-import * as React from "react";
-import { ReactNode } from "react";
+import React, { PureComponent, ReactNode } from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import { HomePage } from "../HomePage/HomePage";
-import { AboutPage } from "../AboutPage/AboutPage";
-import NavBar from "../NavBar/NavBar";
-import MobileNav from "../MobileNav/MobileNav";
 
-class App extends React.PureComponent {
+import { HomePage } from "../HomePage";
+import { AboutPage } from "../AboutPage/AboutPage";
+import { NavBar } from "../NavBar";
+import { MobileNav } from "../MobileNav";
+
+export class App extends PureComponent {
   public render(): ReactNode {
     return (
       <BrowserRouter>
@@ -23,5 +23,3 @@ class App extends React.PureComponent {
     );
   }
 }
-
-export { App };

@@ -1,0 +1,17 @@
+@import "~bootstrap-scss/functions";
+@import "~bootstrap-scss/variables";
+
+$site-home-bg-colour: rgba(181, 206, 205, 0.85);
+
+.container {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: $site-home-bg-colour;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 100vh;
+  width: 100%;
+}
