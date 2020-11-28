@@ -1,0 +1,46 @@
+@import "~bootstrap-scss/functions";
+@import "~bootstrap-scss/variables";
+
+// Custom translucent site header
+$site-header-bg-colour: rgba(0, 0, 0, 0.85);
+
+.container {
+  backdrop-filter: saturate(180%) blur(20px);
+  background-color: $site-header-bg-colour;
+
+  a {
+    color: $gray-500;
+    transition: ease-in-out color 0.15s;
+
+    &:hover {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  display: none;
+  @media (max-width: 640px) {
+    display: block;
+    width: 100vw;
+  }
+}
+
+.spacer {
+  height: 48px;
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 25%;
+  left: 0;
+  bottom: 25%;
+  z-index: 1;
+}
+
+.navButton {
+  width: 100%;
+  justify-content: center;
+}

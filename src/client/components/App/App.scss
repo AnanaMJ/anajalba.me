@@ -1,20 +1,23 @@
 @import "~bootstrap-scss/functions";
 @import "~bootstrap-scss/variables";
 
-// Custom translucent site header
-$site-header-bg-colour: rgba(0, 0, 0, 0.85);
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
-.site-header {
-  backdrop-filter: saturate(180%) blur(20px);
-  background-color: $site-header-bg-colour;
+.page {
+  flex: auto;
+  height: 100%;
+}
 
-  a {
-    color: $gray-500;
-    transition: ease-in-out color 0.15s;
-
-    &:hover {
-      color: $white;
-      text-decoration: none;
-    }
-  }
+.container {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 85%;
+  width: 100%;
 }

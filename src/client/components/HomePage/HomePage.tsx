@@ -1,22 +1,25 @@
-import { faHome } from "@fortawesome/pro-light-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import * as React from "react";
-import { ReactNode } from "react";
-import * as bs from "../../global-styles/Bootstrap.scss";
+import React, { ReactNode, PureComponent } from "react";
 
-class HomePage extends React.PureComponent {
+import { faWrench } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import * as styles from "../../global-styles/Global.scss";
+
+export class HomePage extends PureComponent {
   public render(): ReactNode {
     return (
       <>
-        <h1>
+        <div className={styles.container}>
+          <h1 style={{ backgroundColor: "white", padding: "4px" }}>
+            This is <b>still</b> a site in progress. <FontAwesomeIcon className={styles.icon} icon={faWrench} />
+          </h1>
+          {/* <h1>
           Home Page
           <FontAwesomeIcon className={bs.ml2} icon={faHome} />
         </h1>
-
-        <p>This is Home Page.</p>
+        <p>Welcome to my page.</p> */}
+        </div>
       </>
     );
   }
 }
-
-export { HomePage };
