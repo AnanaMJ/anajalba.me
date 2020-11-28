@@ -1,5 +1,5 @@
 import React, { ReactNode, PureComponent } from "react";
-import { faBaby } from "@fortawesome/pro-light-svg-icons";
+import { faBaby } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import * as bs from "../../global-styles/Bootstrap.scss";
