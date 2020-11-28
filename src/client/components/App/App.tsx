@@ -14,12 +14,10 @@ export class App extends PureComponent {
           <MobileNav />
           <NavBar />
 
-          <div className={styles.container}>
-            <Switch>
-              <Route path={"/"} component={HomePage} exact={true} />
-              <Route path={"/about"} component={AboutPage} />
-            </Switch>
-          </div>
+          <Switch>
+            <Route path={"/"} component={HomePage} exact={true} />
+            <Route path={"/about"} component={AboutPage} />
+          </Switch>
         </div>
       </BrowserRouter>
     );
