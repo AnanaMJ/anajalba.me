@@ -3,8 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import { HomePage } from "../HomePage";
 import { AboutPage } from "../AboutPage/AboutPage";
-import { NavBar } from "../NavBar";
-import { MobileNav } from "../MobileNav";
+import { NavBar, MobileNav } from "../Nav";
 
 export class App extends PureComponent {
   public render(): ReactNode {

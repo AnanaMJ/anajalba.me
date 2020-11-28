@@ -6,6 +6,7 @@ import { faHome, faBaby } from "@fortawesome/pro-light-svg-icons";
 
 import { combine } from "../../helpers/style-helpers";
 import * as bs from "../../global-styles/Bootstrap.scss";
+import { activeStyle } from "./commonStyling";
 import * as style from "./MobileNav.scss";
 
 export const MobileNav = (): ReactElement => {
@@ -16,10 +17,7 @@ export const MobileNav = (): ReactElement => {
         <NavLink
           className={bs.mxAuto}
           to="/"
-          activeStyle={{
-            color: "red",
-            fontWeight: "bold",
-          }}
+          activeStyle={activeStyle}
           isActive={(match, location): boolean => {
             return location.pathname === "/";
           }}
@@ -31,10 +29,7 @@ export const MobileNav = (): ReactElement => {
         <NavLink
           className={bs.mxAuto}
           to="/about"
-          activeStyle={{
-            color: "red",
-            fontWeight: "bold",
-          }}
+          activeStyle={activeStyle}
           isActive={(match, location): boolean => {
             return location.pathname === "/about";
           }}

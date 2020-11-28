@@ -12,7 +12,8 @@
 		"baseUrl": "./",
 		"allowJs": true,
 		"sourceMap": true,
-		"removeComments": true
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true
 	},
 	"include": [
 		"./src/server/app.ts"
