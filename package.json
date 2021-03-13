@@ -4,6 +4,12 @@
   "repository": "git@github.com:AnanaMJ/anajalba.me.git",
   "author": "Ana Jalba <ana.jalba13@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": ">= 14",
+    "npm": "please-use-yarn",
+    "pnpm": "please-use-yarn",
+    "yarn": ">= 2.0.0"
+  },
   "scripts": {
     "clean": "rimraf ./build",
     "prod": "run-s clean build start",

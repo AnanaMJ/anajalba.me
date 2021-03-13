@@ -1,10 +1,9 @@
 FROM node:erbium
-ARG NPM_FONT_AWESOME_TOKEN
 
 WORKDIR /usr/src/app
 
 # dependencies
-COPY package.json yarn.lock .npmrc ./
+COPY package.json yarn.lock .yarnrc.yml ./
 RUN yarn
 
 # source code
