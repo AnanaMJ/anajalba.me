@@ -8,3 +8,9 @@ To run locally:
 yarn #to install
 yarn dev # to run
 ```
+
+To deploy:
+```bash
+yarn version
+git push && git push --tags
+```
