@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import { NavLink } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBaby } from "@fortawesome/free-solid-svg-icons";
+import { FaHome, FaBaby } from "react-icons/fa";
+import { Icon } from "@chakra-ui/icons";
 
 import { activeStyle } from "./commonStyling";
 import * as styles from "./NavBar.scss";
@@ -21,7 +21,7 @@ export const NavBar = (): ReactElement => {
           }}
         >
           <h4>
-            Home <FontAwesomeIcon className={styles.icon} icon={faHome} />
+            Home <Icon className={styles.icon} as={FaHome} />
           </h4>
         </NavLink>
         <NavLink
@@ -33,7 +33,7 @@ export const NavBar = (): ReactElement => {
           }}
         >
           <h4>
-            About <FontAwesomeIcon className={styles.icon} icon={faBaby} />
+            About <Icon className={styles.icon} as={FaBaby} />
           </h4>
         </NavLink>
       </div>

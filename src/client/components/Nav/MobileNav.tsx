@@ -1,8 +1,8 @@
 import React, { ReactElement } from "react";
 import { NavLink } from "react-router-dom";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHome, faBaby } from "@fortawesome/free-solid-svg-icons";
+import { FaHome, FaBaby } from "react-icons/fa";
+import { Icon } from "@chakra-ui/icons";
 
 import { combine } from "../../helpers/style-helpers";
 import * as bs from "../../global-styles/Bootstrap.scss";
@@ -23,7 +23,7 @@ export const MobileNav = (): ReactElement => {
           }}
         >
           {/* <button type="button" className={combine(bs.btn, style.navButton)} aria-label="Home"> */}
-          <FontAwesomeIcon className={bs.mxAuto} icon={faHome} />
+          <Icon className={bs.mxAuto} as={FaHome} />
           {/* </button> */}
         </NavLink>
         <NavLink
@@ -35,7 +35,7 @@ export const MobileNav = (): ReactElement => {
           }}
         >
           {/* <button  type="button" className={combine(bs.btn, style.navButton)} aria-label="Home"> */}
-          <FontAwesomeIcon className={bs.mxAuto} icon={faBaby} />
+          <Icon className={bs.mxAuto} as={FaBaby} />
           {/* </button> */}
         </NavLink>
       </div>

@@ -1,7 +1,7 @@
 import React, { ReactNode, PureComponent } from "react";
 
-import { faWrench } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaWrench } from "react-icons/fa";
+import { Icon } from "@chakra-ui/icons";
 
 import * as styles from "../../global-styles/Global.scss";
 
@@ -11,7 +11,7 @@ export class HomePage extends PureComponent {
       <>
         <div className={styles.container}>
           <h1 style={{ backgroundColor: "white", padding: "4px" }}>
-            This is <b>still</b> a site in progress. <FontAwesomeIcon className={styles.icon} icon={faWrench} />
+            This is <b>still</b> a site in progress. <Icon className={styles.icon} as={FaWrench} />
           </h1>
           {/* <h1>
           Home Page
